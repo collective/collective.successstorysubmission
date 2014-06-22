@@ -1,0 +1,17 @@
+collective.successstorysubmission Installation
+------------------------------------------------------
+
+To install collective.successstorysubmission using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``collective.successstorysubmission`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        collective.successstorysubmission
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout

@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+
+	<field name="your_name" type="zope.schema.TextLine">
+	  <description/>
+	  <title>Your Full Name</title>
+	</field>
+	<field name="your_email_address" type="zope.schema.TextLine">
+	  <description/>
+	  <title>Your Email Address</title>
+	</field>
+	<field name="your_telephone_number" type="zope.schema.TextLine">
+	  <description>optional - please include country code</description>
+	  <required>False</required>
+	  <title>Your Telephone Number</title>
+	</field>
+	<field name="client_name" type="zope.schema.TextLine">
+	  <description>please tell us who it was for, or choose a generic name if you prefer</description>
+	  <title>Who was the project for?</title>
+	</field>
+	<field name="client_vertical" type="zope.schema.Set">
+	  <description>please choose one or more of these options if they are applicable</description>
+	  <required>False</required>
+	  <title>What is the client's vertical?</title>
+	  <value_type type="zope.schema.Choice">
+	    <values>
+	      <element>for-profit (commercial)</element>
+	      <element>education</element>
+	      <element>non-profit (e.g. non-governmental organization or 'NGO')</element>
+	      <element>government</element>
+	      <element>other</element>
+	    </values>
+	  </value_type>
+	</field>
+	<field name="who_did_the_work_" type="zope.schema.TextLine">
+	  <description>the name of the person or company</description>
+	  <required>False</required>
+	  <title>Who did the work?</title>
+	</field>
+	<field name="can_we_publish_who_did_the_work_" type="zope.schema.Bool">
+	  <description/>
+	  <required>False</required>
+	  <title>May we publish who did the work?</title>
+	  <form:widget type="z3c.form.browser.radio.RadioFieldWidget"/>
+	</field>
+	<field name="the_challenge" type="plone.app.textfield.RichText">
+	  <description/>
+	  <required>False</required>
+	  <title>What was the challenge or pain points?</title>
+	</field>
+	<field name="the_solution" type="zope.schema.Set">
+	  <description>please choose one or more of the following features</description>
+	  <required>False</required>
+	  <title>What was the solution?</title>
+	  <value_type type="zope.schema.Choice">
+	    <values>
+	      <element>multilingual</element>
+	      <element>single sign-on</element>
+	      <element>people directory</element>
+	      <element>complex workflow</element>
+	      <element>search capabilities</element>
+	      <element>third party integration</element>
+	      <element>intranet</element>
+	      <element>multi-site management</element>
+	      <element>third party authentication</element>
+	      <element>e-commerce</element>
+	    </values>
+	  </value_type>
+	</field>
+	<field name="the_happy_ending" type="plone.app.textfield.RichText">
+	  <description>What were the results? How is it better now?</description>
+	  <required>False</required>
+	  <title>Tell us the happy ending</title>
+	</field>
+	<field name="customer_quotes" type="plone.app.textfield.RichText">
+	  <description/>
+	  <required>False</required>
+	  <title>Customer quotes</title>
+	</field>
+	<field name="attachments" type="plone.app.textfield.RichText">
+	  <description>add one or more screenshots, videos, or screencasts</description>
+	  <required>False</required>
+	  <title>Attachments</title>
+	</field>
+	<field name="links" type="plone.app.textfield.RichText">
+	  <description>links to existing case study, link to client's site, link to provider's site, upload provider's logo image</description>
+	  <required>False</required>
+	  <title>Links</title>
+	</field>        
+
+
+    </schema>
+    
+</model>
